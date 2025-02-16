@@ -43,10 +43,6 @@ app.use((err, req, res, next) => {
     return ResponseWrapper.error(res, err.message || "Internal Server Error", err.statusCode || 500);
 });
 
-
-// load all models
-require("./server/models");
-
 const server = http.createServer(app);
 
 server.listen(process.env.SRV_PORT, () => {
