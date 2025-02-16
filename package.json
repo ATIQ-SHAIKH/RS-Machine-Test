@@ -1,0 +1,20 @@
+{
+  "name": "rising_superstars",
+  "version": "1.0.0",
+  "description": "Machine Test for Rising Superstars",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "seed": "node server/seeds/index.js"
+  },
+  "author": "Atiq Shaikh",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "mongoose": "^8.10.0",
+    "winston": "^3.17.0"
+  }
+}

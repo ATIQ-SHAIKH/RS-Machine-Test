@@ -1,0 +1,445 @@
+{
+    "CATEGORIES": [
+        {
+            "name": "Athleticism"
+        },
+        {
+            "name": "Boosters"
+        },
+        {
+            "name": "Music"
+        },
+        {
+            "name": "Memory"
+        },
+        {
+            "name": "Creativity"
+        },
+        {
+            "name": "Languages"
+        },
+        {
+            "name": "Logic"
+        }
+    ],
+    "ACTIVITIES": [
+        {
+            "name": "Advanced Mobility Exercises",
+            "category": "Athleticism"
+        },
+        {
+            "name": "Knowledge Boosters",
+            "category": "Boosters"
+        },
+        {
+            "name": "Visual Solfege",
+            "category": "Music"
+        },
+        {
+            "name": "Auditory Memory (Song 2)",
+            "category": "Memory"
+        },
+        {
+            "name": "Auditory Magic (Set 2)",
+            "category": "Creativity"
+        },
+        {
+            "name": "Talk, To Listen",
+            "category": "Languages"
+        },
+        {
+            "name": "Finger Skills",
+            "category": "Athleticism"
+        },
+        {
+            "name": "Stimulus Explosion",
+            "category": "Creativity"
+        },
+        {
+            "name": "Foundations of Logic (Quantity)",
+            "category": "Logic"
+        }
+    ],
+    "SUGGESTED_ACTIVITY_PLAN": {
+        "fromDate": "2024-12-31T18:30:00.000Z",
+        "toDate": "2025-12-30T18:30:00.000Z",
+        "activities": [
+            {
+                "activity": "Advanced Mobility Exercises",
+                "frequency": "maximize",
+                "time": "max"
+            },
+            {
+                "activity": "Knowledge Boosters",
+                "frequency": "2x/Day",
+                "time": "30 sec"
+            },
+            {
+                "activity": "Visual Solfege",
+                "frequency": "1x/Day",
+                "time": "30 sec"
+            },
+            {
+                "activity": "Auditory Memory (Song 2)",
+                "frequency": "1x/Day",
+                "time": "30 sec"
+            },
+            {
+                "activity": "Auditory Magic (Set 2)",
+                "frequency": "2 sounds/Day",
+                "time": "60 sec"
+            },
+            {
+                "activity": "Talk, To Listen",
+                "frequency": "1x/Day",
+                "time": "60 sec"
+            },
+            {
+                "activity": "Finger Skills",
+                "frequency": "3x/Week",
+                "time": "60 sec"
+            },
+            {
+                "activity": "Stimulus Explosion",
+                "frequency": "2x/Week",
+                "time": "60 sec"
+            },
+            {
+                "activity": "Foundations of Logic (Quantity)",
+                "frequency": "2x/Week",
+                "time": "60 sec"
+            }
+        ]
+    },
+    "SUGGESTED_DAY_PLANS": [
+        {
+            "day": 14,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Finger Skills",
+                    "frequency": "3x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "day": 15,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Foundations of Logic (Quantity)",
+                    "frequency": "2x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "day": 16,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Stimulus Explosion",
+                    "frequency": "2x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "day": 17,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Finger Skills",
+                    "frequency": "3x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "day": 18,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Foundations of Logic (Quantity)",
+                    "frequency": "2x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "day": 19,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Stimulus Explosion",
+                    "frequency": "2x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        },
+        {
+            "day": 20,
+            "activities": [
+                {
+                    "name": "Advanced Mobility Exercises",
+                    "frequency": "maximize",
+                    "time": "max",
+                    "status": "pending"
+                },
+                {
+                    "name": "Knowledge Boosters",
+                    "frequency": "2x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Visual Solfege",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Memory (Song 2)",
+                    "frequency": "1x/Day",
+                    "time": "30 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Auditory Magic (Set 2)",
+                    "frequency": "2 sounds/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Talk, To Listen",
+                    "frequency": "1x/Day",
+                    "time": "60 sec",
+                    "status": "pending"
+                },
+                {
+                    "name": "Finger Skills",
+                    "frequency": "3x/Week",
+                    "time": "60 sec",
+                    "status": "pending"
+                }
+            ]
+        }
+    ]
+}

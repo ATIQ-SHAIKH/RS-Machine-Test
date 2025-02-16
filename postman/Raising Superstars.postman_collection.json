@@ -1,0 +1,684 @@
+{
+	"info": {
+		"_postman_id": "aa55d9aa-36e5-4db3-a4d1-bcc387b312d9",
+		"name": "Raising Superstars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38446522",
+		"_collection_link": "https://aibuddha-3364.postman.co/workspace/Aibuddha-Workspace~b1f9c419-2565-4b15-8772-210b364e463a/collection/38446522-aa55d9aa-36e5-4db3-a4d1-bcc387b312d9?action=share&source=collection_link&creator=38446522"
+	},
+	"item": [
+		{
+			"name": "Get Pending Activities Count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8989/api/get/suggested/day/plan/pending/count?day=19",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"api",
+						"get",
+						"suggested",
+						"day",
+						"plan",
+						"pending",
+						"count"
+					],
+					"query": [
+						{
+							"key": "day",
+							"value": "19",
+							"description": "can be 14 to 20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/get/suggested/day/plan/pending/count?day=19",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"get",
+								"suggested",
+								"day",
+								"plan",
+								"pending",
+								"count"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"totalPendingTasks\": 7\n    }\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/get/suggested/day/plan/pending/count?day=22",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"get",
+								"suggested",
+								"day",
+								"plan",
+								"pending",
+								"count"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Data not found\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "400",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/get/suggested/day/plan/pending/count?day=199",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"get",
+								"suggested",
+								"day",
+								"plan",
+								"pending",
+								"count"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "199"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-P7vaHNJzA1Mb0r5oN/ARc7FR6W0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:18:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"errors\": [\n            {\n                \"type\": \"field\",\n                \"value\": \"199\",\n                \"msg\": \"Invalid day\",\n                \"path\": \"day\",\n                \"location\": \"query\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Day Plan",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8989/api/get/suggested/day/plan?day=19",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"api",
+						"get",
+						"suggested",
+						"day",
+						"plan"
+					],
+					"query": [
+						{
+							"key": "day",
+							"value": "19",
+							"description": "can be 14 to 20"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/get/suggested/day/plan?day=19",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"get",
+								"suggested",
+								"day",
+								"plan"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "19"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1125"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"465-83Rj/1lUP3fNP7JCNFBt7w/TIWA\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:20:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"_id\": \"67b20c5f4f621c00a40c8c00\",\n        \"day\": 19,\n        \"activities\": [\n            {\n                \"activity\": {\n                    \"name\": \"Advanced Mobility Exercises\"\n                },\n                \"frequency\": \"maximize\",\n                \"time\": \"max\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c01\"\n            },\n            {\n                \"activity\": {\n                    \"name\": \"Knowledge Boosters\"\n                },\n                \"frequency\": \"2x/Day\",\n                \"time\": \"30 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c02\"\n            },\n            {\n                \"activity\": {\n                    \"name\": \"Visual Solfege\"\n                },\n                \"frequency\": \"1x/Day\",\n                \"time\": \"30 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c03\"\n            },\n            {\n                \"activity\": {\n                    \"name\": \"Auditory Memory (Song 2)\"\n                },\n                \"frequency\": \"1x/Day\",\n                \"time\": \"30 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c04\"\n            },\n            {\n                \"activity\": {\n                    \"name\": \"Auditory Magic (Set 2)\"\n                },\n                \"frequency\": \"2 sounds/Day\",\n                \"time\": \"60 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c05\"\n            },\n            {\n                \"activity\": {\n                    \"name\": \"Talk, To Listen\"\n                },\n                \"frequency\": \"1x/Day\",\n                \"time\": \"60 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c06\"\n            },\n            {\n                \"activity\": {\n                    \"name\": \"Stimulus Explosion\"\n                },\n                \"frequency\": \"2x/Week\",\n                \"time\": \"60 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c07\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2025-02-16T16:03:43.630Z\",\n        \"updatedAt\": \"2025-02-16T16:15:51.862Z\"\n    }\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/get/suggested/day/plan?day=25",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"get",
+								"suggested",
+								"day",
+								"plan"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "25"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-X8zDWswZk8U3NSmY/DjbZwFAwzQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:21:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Data not found\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "400",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/get/suggested/day/plan?day=199",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"get",
+								"suggested",
+								"day",
+								"plan"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "199"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "105"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"69-P7vaHNJzA1Mb0r5oN/ARc7FR6W0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:18:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"errors\": [\n            {\n                \"type\": \"field\",\n                \"value\": \"199\",\n                \"msg\": \"Invalid day\",\n                \"path\": \"day\",\n                \"location\": \"query\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Activity Status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8989/api/update/activity/status?activity_id=67b20c5f4f621c00a40c8c03&status=completed",
+					"host": [
+						"localhost"
+					],
+					"port": "8989",
+					"path": [
+						"api",
+						"update",
+						"activity",
+						"status"
+					],
+					"query": [
+						{
+							"key": "activity_id",
+							"value": "67b20c5f4f621c00a40c8c03"
+						},
+						{
+							"key": "status",
+							"value": "completed",
+							"description": "can be pending or completed"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/update/activity/status?activity_id=67b20c5f4f621c00a40c8c01&status=pending",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"update",
+								"activity",
+								"status"
+							],
+							"query": [
+								{
+									"key": "activity_id",
+									"value": "67b20c5f4f621c00a40c8c01"
+								},
+								{
+									"key": "status",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1134"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"46e-YUexAYMW0wfvMewcSknv0z8VXeU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:22:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"_id\": \"67b20c5f4f621c00a40c8c00\",\n        \"day\": 19,\n        \"activityPlan\": \"67b20c5f4f621c00a40c8bcd\",\n        \"activities\": [\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bc3\",\n                \"frequency\": \"maximize\",\n                \"time\": \"max\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c01\"\n            },\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bc4\",\n                \"frequency\": \"2x/Day\",\n                \"time\": \"30 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c02\"\n            },\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bc5\",\n                \"frequency\": \"1x/Day\",\n                \"time\": \"30 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c03\"\n            },\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bc6\",\n                \"frequency\": \"1x/Day\",\n                \"time\": \"30 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c04\"\n            },\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bc7\",\n                \"frequency\": \"2 sounds/Day\",\n                \"time\": \"60 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c05\"\n            },\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bc8\",\n                \"frequency\": \"1x/Day\",\n                \"time\": \"60 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c06\"\n            },\n            {\n                \"activity\": \"67b20c5f4f621c00a40c8bca\",\n                \"frequency\": \"2x/Week\",\n                \"time\": \"60 sec\",\n                \"status\": \"pending\",\n                \"_id\": \"67b20c5f4f621c00a40c8c07\"\n            }\n        ],\n        \"__v\": 0,\n        \"createdAt\": \"2025-02-16T16:03:43.630Z\",\n        \"updatedAt\": \"2025-02-16T16:22:33.390Z\"\n    }\n}"
+				},
+				{
+					"name": "404",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/update/activity/status?activity_id=67b20c5f4f621c00a40c8c00&status=pending",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"update",
+								"activity",
+								"status"
+							],
+							"query": [
+								{
+									"key": "activity_id",
+									"value": "67b20c5f4f621c00a40c8c00"
+								},
+								{
+									"key": "status",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "56"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"38-X8zDWswZk8U3NSmY/DjbZwFAwzQ\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:26:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"success\": false,\n    \"message\": \"Data not found\",\n    \"data\": null\n}"
+				},
+				{
+					"name": "400",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/api/update/activity/status?activity_id=67b20c5f4f621c00a40c8c00&status=pendin",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"update",
+								"activity",
+								"status"
+							],
+							"query": [
+								{
+									"key": "activity_id",
+									"value": "67b20c5f4f621c00a40c8c00"
+								},
+								{
+									"key": "status",
+									"value": "pendin"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Secure-Server"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "114"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"72-hTI/wKYrTyuobotsnUTQxiYnbG4\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 16 Feb 2025 16:27:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"errors\": [\n            {\n                \"type\": \"field\",\n                \"value\": \"pendin\",\n                \"msg\": \"Invalid status\",\n                \"path\": \"status\",\n                \"location\": \"query\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}
