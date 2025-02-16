@@ -1,14 +1,47 @@
 {
 	"info": {
-		"_postman_id": "aa55d9aa-36e5-4db3-a4d1-bcc387b312d9",
+		"_postman_id": "660dc65d-d009-4f7c-81b2-5d16339eb531",
 		"name": "Raising Superstars",
+		"description": "Each request has examples attached to it.  \nYou can do one of 2 things or try out both:\n\n- Run collection (click on 3 dots > Run Collection), Pre-request are in place for Update Activity Status so you don't have to manually figure out what value to put in place of `activity_id,`and test cases are also in place.\n    \n- Try out each of the request manually.\n    \n- Checkout the examples\n    \n\nNote: The way pre-request script is written for Update Activity Status after calling it 7 times test cases might fail, in that case re-seed the database by doing `npm run seed`in the backend terminal.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38446522",
-		"_collection_link": "https://aibuddha-3364.postman.co/workspace/Aibuddha-Workspace~b1f9c419-2565-4b15-8772-210b364e463a/collection/38446522-aa55d9aa-36e5-4db3-a4d1-bcc387b312d9?action=share&source=collection_link&creator=38446522"
+		"_exporter_id": "19783496",
+		"_collection_link": "https://www.postman.com/navigation-specialist-12404858/workspace/rs-machine-test/collection/19783496-660dc65d-d009-4f7c-81b2-5d16339eb531?action=share&source=collection_link&creator=19783496"
 	},
 	"item": [
 		{
 			"name": "Get Pending Activities Count",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Response status code is 200', function () {",
+							"    pm.response.to.have.status(200);",
+							"})",
+							"",
+							"pm.test('Content-Type header is application/json', function () {",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+							"})",
+							"",
+							"pm.test('Response has the required fields', function () {",
+							"    const responseData = pm.response.json();",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('success');",
+							"    pm.expect(responseData).to.have.property('message');",
+							"    pm.expect(responseData).to.have.property('data');",
+							"})",
+							"",
+							"pm.test('TotalPendingTasks is a non-negative integer', function () {",
+							"    const responseData = pm.response.json();",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.data.totalPendingTasks).to.be.a('number');",
+							"    pm.expect(responseData.data.totalPendingTasks).to.be.at.least(0);",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -67,8 +100,8 @@
 					},
 					"status": "OK",
 					"code": 200,
-					"_postman_previewlanguage": null,
-					"header": null,
+					"_postman_previewlanguage": "Text",
+					"header": [],
 					"cookie": [],
 					"body": "{\n    \"success\": true,\n    \"message\": \"OK\",\n    \"data\": {\n        \"totalPendingTasks\": 7\n    }\n}"
 				},
@@ -190,6 +223,49 @@
 		},
 		{
 			"name": "Get Day Plan",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test('Response status code is 200', function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"})",
+							"",
+							"pm.test('Content-Type header is application/json', function () {",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+							"})",
+							"",
+							"pm.test('Validate the success field is true', function () {",
+							"    const responseData = pm.response.json();",
+							"    pm.expect(responseData).to.have.property('success', true);",
+							"})",
+							"",
+							"pm.test('Data object has the required fields', function () {",
+							"    const responseData = pm.response.json();",
+							"    pm.expect(responseData.data).to.be.an('object');",
+							"    pm.expect(responseData.data).to.include.all.keys('_id', 'day', 'activities', '__v', 'createdAt', 'updatedAt');",
+							"})",
+							"",
+							"pm.test('Each activity object within the \\'activities\\' array contains non-empty properties', function () {",
+							"    const responseData = pm.response.json();",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.data.activities).to.be.an('array');",
+							"    responseData.data.activities.forEach(function (activity) {",
+							"        pm.expect(activity).to.have.property('activity').to.be.an('object');",
+							"        pm.expect(activity.activity).to.have.property('name').that.is.a('string').and.to.have.lengthOf.at.least(1, 'name should not be empty');",
+							"        pm.expect(activity).to.have.property('frequency').that.is.a('string').and.to.have.lengthOf.at.least(1, 'Frequency should not be empty');",
+							"        pm.expect(activity).to.have.property('time').that.is.a('string').and.to.have.lengthOf.at.least(1, 'Time should not be empty');",
+							"        pm.expect(activity).to.have.property('status').that.is.a('string').and.to.have.lengthOf.at.least(1, 'Status should not be empty');",
+							"        pm.expect(activity).to.have.property('_id').that.is.a('string').and.to.have.lengthOf.at.least(1, '_id should not be empty');",
+							"    });",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -430,11 +506,86 @@
 		},
 		{
 			"name": "Update Activity Status",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"try {",
+							"    const response = await pm.sendRequest({",
+							"        url: \"localhost:8989/api/get/suggested/day/plan?day=19\",",
+							"        method: \"GET\"",
+							"    });",
+							"",
+							"    const { data: { activities } } = response.json();",
+							"    pm.globals.set(\"activity_id\", activities[0]._id);",
+							"} catch (err) {",
+							"    console.error(err);",
+							"}"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Success field should exist and be true\", function () {",
+							"  const responseData = pm.response.json();",
+							"  ",
+							"  pm.expect(responseData).to.be.an('object');",
+							"  pm.expect(responseData.success).to.exist.and.to.be.a('boolean').and.to.equal(true);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Data object exists and is in the correct format\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.data).to.exist.and.to.be.an('object');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Activities array is present and contains expected number of elements\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.data.activities).to.exist.and.to.be.an('array');",
+							"    pm.expect(responseData.data.activities).to.have.length.above(0);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Each activity object in the activities array contains non-empty strings for activity, frequency, time, and status\", function () {",
+							"    const responseData = pm.response.json();",
+							"    ",
+							"    pm.expect(responseData.data.activities).to.be.an('array');",
+							"    responseData.data.activities.forEach(function(activity) {",
+							"         pm.expect(activity).to.have.property('activity').to.be.an('object');",
+							"        pm.expect(activity.activity).to.have.property('name').that.is.a('string').and.to.have.lengthOf.at.least(1, 'name should not be empty');",
+							"        pm.expect(activity).to.have.property('frequency').that.is.a('string').and.to.have.lengthOf.at.least(1, 'Frequency should not be empty');",
+							"        pm.expect(activity).to.have.property('time').that.is.a('string').and.to.have.lengthOf.at.least(1, 'Time should not be empty');",
+							"        pm.expect(activity).to.have.property('status').that.is.a('string').and.to.have.lengthOf.at.least(1, 'Status should not be empty');",
+							"        pm.expect(activity).to.have.property('_id').that.is.a('string').and.to.have.lengthOf.at.least(1, '_id should not be empty');",
+							"    });",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"request": {
 				"method": "PUT",
 				"header": [],
 				"url": {
-					"raw": "localhost:8989/api/update/activity/status?activity_id=67b20c5f4f621c00a40c8c03&status=completed",
+					"raw": "localhost:8989/api/update/activity/status?activity_id={{activity_id}}&status=completed",
 					"host": [
 						"localhost"
 					],
@@ -448,7 +599,7 @@
 					"query": [
 						{
 							"key": "activity_id",
-							"value": "67b20c5f4f621c00a40c8c03"
+							"value": "{{activity_id}}"
 						},
 						{
 							"key": "status",
@@ -679,6 +830,28 @@
 					"body": "{\n    \"error\": {\n        \"errors\": [\n            {\n                \"type\": \"field\",\n                \"value\": \"pendin\",\n                \"msg\": \"Invalid status\",\n                \"path\": \"status\",\n                \"location\": \"query\"\n            }\n        ]\n    }\n}"
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
