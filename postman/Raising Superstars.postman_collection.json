@@ -5,7 +5,7 @@
 		"description": "Each request has examples attached to it.  \nYou can do one of 2 things or try out both:\n\n- Run collection (click on 3 dots > Run Collection), Pre-request are in place for Update Activity Status so you don't have to manually figure out what value to put in place of `activity_id,`and test cases are also in place.\n    \n- Try out each of the request manually.\n    \n- Checkout the examples\n    \n\nNote: The way pre-request script is written for Update Activity Status after calling it 7 times test cases might fail, in that case re-seed the database by doing `npm run seed`in the backend terminal.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "19783496",
-		"_collection_link": "https://www.postman.com/navigation-specialist-12404858/workspace/rs-machine-test/collection/19783496-660dc65d-d009-4f7c-81b2-5d16339eb531?action=share&source=collection_link&creator=19783496"
+		"_collection_link": "https://www.postman.com/navigation-specialist-12404858/rs-machine-test/collection/gms6q19/raising-superstars?action=share&source=collection_link&creator=19783496"
 	},
 	"item": [
 		{
