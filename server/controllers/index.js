@@ -35,8 +35,9 @@ const updateActivityStatus = async (req, res, next) => {
     logger.info(JSON.stringify(req.query));
     try {
         const { activity_id, status } = req.query;
-        const doc = await suggestedDayPlanManager.findOneAndUpdate({ "activities._id": activity_id }, { $set: { "activities.$.status": status } }, {
-            new: true
+        const doc = await suggestedDayPlanManager.findOneAndUpdate({ "activities._id": activity_id }, { $set: { "activities.$.status": status } }, { path: "activities.activity", select: "-_id name" }, {
+            new: true,
+            projection: { activityPlan: 0 }
         });
         if (!doc) {
             return ResponseWrapper.error(res, "Data not found", 404)

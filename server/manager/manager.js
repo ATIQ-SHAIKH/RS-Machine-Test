@@ -41,8 +41,8 @@ class Manager {
     return this.model.updateOne(conditions, value, options);
   }
 
-  findOneAndUpdate(conditions = {}, value, options = {}) {
-    return this.model.findOneAndUpdate(conditions, value, options)
+  findOneAndUpdate(conditions = {}, value, populate = [], options = {}) {
+    return this.model.findOneAndUpdate(conditions, value, options).populate(populate)
   }
 
   updateMany(conditions = {}, value, options = {}) {
