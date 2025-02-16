@@ -35,10 +35,6 @@ You can test the APIs using postman collection.
 You can import the postman collection using `json` file present in postman folder from the project directory.
 Make sure to checkout overview of the collection
 
-## Deploy
-
-Describe the tools needed to deploy a new project.
-
 ## Technologies
 
 _Name the technologies used in the project._ 
